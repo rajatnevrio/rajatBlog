@@ -1,24 +1,24 @@
-// const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
-// module.exports = (phase) => {
-//     if (phase ===PHASE_DEVELOPMENT_SERVER){
-//         return {
-//             env: {
-//                 mongodb_user: "rajat",
-//                 mongodb_username: "rajat234",
-//                 mongodb_password: "iket6ow",
-//                 mongodb_clustername: "cluster0",
-//                 mongodb_database: "myBlog-dev",
-//               },
-//         }
-//     }
-//   return {
-//     env: {
-//       mongodb_user: "rajat",
-//       mongodb_username: "rajat234",
-//       mongodb_password: "iket6ow",
-//       mongodb_clustername: "cluster0",
-//       mongodb_database: "myBlog",
-//     },
-//   };
-// };
+module.exports = (phase) => {
+    if (phase ===PHASE_DEVELOPMENT_SERVER){
+        return {
+            env: {
+                mongodb_user: process.env.mongodb_user,
+                mongodb_username: process.env.mongodb_username,
+                mongodb_password: process.env.mongodb_password,
+                mongodb_clustername: process.env.mongodb_clustername,
+                mongodb_database: process.env.mongodb_database,
+              },
+        }
+    }
+  return {
+    env: {
+      mongodb_user: process.env.mongodb_user,
+      mongodb_username: process.env.mongodb_username,
+      mongodb_password: process.env.mongodb_password,
+      mongodb_clustername: process.env.mongodb_clustername,
+      mongodb_database: process.env.mongodb_database,
+    },
+  };
+};
