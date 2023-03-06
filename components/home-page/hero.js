@@ -13,7 +13,7 @@ function Hero() {
       </div>
       <h1>Hi, I'm Rajat</h1>
       <p>
-        I blog about web development - especially frontebd frameworks like react
+        I blog about web development - especially frontend frameworks like react
         and nextjs
       </p>
     </section>
